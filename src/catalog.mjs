@@ -168,6 +168,13 @@ export async function executeSessionTool(session, name, input = {}, { signal } =
 
   const available = new Set(getSessionCatalog(session).map((tool) => tool.name));
   if (!available.has(name)) {
+    if (name === 'submit_exercise' && !state.windowOpen) {
+      return {
+        ok: false,
+        reason: 'window_closed',
+        message: 'Exercise submission is unavailable because the option window has closed.',
+      };
+    }
     if (name === 'submit_exercise' && state.blackout) {
       return {
         ok: false,

@@ -1,0 +1,555 @@
+TAP version 13
+# Subtest: makes the dated countdown and plan clause the visible decision headline
+not ok 1 - makes the dated countdown and plan clause the visible decision headline
+  ---
+  duration_ms: 6.873474
+  type: 'test'
+  location: '/home/hungson175/dev/earning-money/project/freelance-hunter/artifacts/ninety-days-webmcp/tests/countdown_calendar.test.mjs:9:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    The input did not match the regular expression /data-testid="countdown-window-status"[^>]*>ACTION WINDOW</. Input:
+    
+    '<!doctype html>\n' +
+      '<html lang="en">\n' +
+      '  <head>\n' +
+      '    <meta charset="UTF-8" />\n' +
+      '    <meta name="viewport" content="width=device-width, initial-scale=1.0" />\n' +
+      '    <meta name="theme-color" content="#071915" />\n' +
+      '    <title>Ninety Days — make the window count</title>\n' +
+      '    <meta http-equiv="origin-trial" content="[PUBLIC_ORIGIN_TRIAL_TOKEN_REDACTED_FROM_PROVENANCE]">\n' +
+      `    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23071915'/%3E%3Cpath d='M20 19h24v8H30v6h12v8H30v4h14v8H20z' fill='%23b9f54a'/%3E%3C/svg%3E" />\n` +
+      '    <link rel="stylesheet" href="./styles.css" />\n' +
+      '  </head>\n' +
+      '  <body>\n' +
+      '    <header class="site-header">\n' +
+      '      <a class="wordmark" href="#landing" aria-label="Ninety Days home">\n' +
+      '        <span class="wordmark-mark">90</span>\n' +
+      '        <span>NINETY DAYS</span>\n' +
+      '      </a>\n' +
+      '      <nav aria-label="Primary navigation">\n' +
+      '        <a href="#account">Grant</a>\n' +
+      '        <a href="#derivation">Tax model</a>\n' +
+      '        <a href="#registry">Agent tools</a>\n' +
+      '      </nav>\n' +
+      '      <span class="privacy-pill">LOCAL · NO ACCOUNT</span>\n' +
+      '    </header>\n' +
+      '\n' +
+      '    <main>\n' +
+      '      <section id="landing" class="hero section-shell">\n' +
+      '        <div class="hero-copy">\n' +
+      '          <p class="eyebrow">YOUR NINETY DAYS</p>\n' +
+      '          <h1>Make the option window count.</h1>\n' +
+      '          <p class="hero-lede">\n' +
+      '            See the cash, the Form 6251 adjustment, and the exact crossover before a\n' +
+      '            post-employment option window closes.\n' +
+      '          </p>\n' +
+      '          <div class="hero-actions">\n' +
+      '            <a class="button button-primary" href="#forms">Model 4,263 shares</a>\n' +
+      '            <a class="button button-secondary" href="#derivation">Show the math</a>\n' +
+      '          </div>\n' +
+      '          <p class="statute-note">\n' +
+      '            “90-day” is product shorthand. The statute uses <strong>3 months; plan date controls.</strong>\n' +
+      '          </p>\n' +
+      '        </div>\n' +
+      '        <aside id="countdown" class="countdown-card" aria-label="12 days remaining in exercise window">\n' +
+      '          <div class="countdown-topline">\n' +
+      '            <span>EMP-4471</span>\n' +
+      '            <span class="signal signal-live">ACTION WINDOW</span>\n' +
+      '          </div>\n' +
+      '          <div class="countdown-number" data-testid="countdown-days">12</div>\n' +
+      '          <div class="countdown-label">days remaining</div>\n' +
+      '          <div class="countdown-clock" data-testid="countdown-clock">00:04:17</div>\n' +
+      '          <time class="countdown-date" datetime="2026-09-03">Deadline · 03 Sep 2026</time>\n' +
+      '          <p>Plan §6.3 — the post-termination period starts on the last day worked.</p>\n' +
+      '        </aside>\n' +
+      '      </section>\n' +
+      '\n' +
+      '      <section id="account" class="section-shell section-block">\n' +
+      '        <div class="section-heading">\n' +
+      '          <div>\n' +
+      '            <p class="eyebrow">EQUITY ACCOUNT</p>\n' +
+      '            <h2>One decision. Every assumption visible.</h2>\n' +
+      '          </div>\n' +
+      '          <span class="updated">Synthetic snapshot · 2026</span>\n' +
+      '        </div>\n' +
+      '        <div class="account-grid">\n' +
+      '          <article class="grant-card grant-card-primary">\n' +
+      '            <div class="card-kicker"><span>EMP-4471</span><span>ISO · VESTED</span></div>\n' +
+      '            <p class="grant-value">18,400 <span>shares</span></p>\n' +
+      '            <div class="metric-row"><span>Exercise price</span><strong>$2.25</strong></div>\n' +
+      '            <div class="metric-row"><span>Synthetic FMV</span><strong>$17.25</strong></div>\n' +
+      '            <div class="metric-row"><span>Exercise all</span><strong>$41,400.00</strong></div>\n' +
+      '            <p class="clause">Plan §6.3 — the post-termination period starts on the last day worked. The plan deadline controls.</p>\n' +
+      '          </article>\n' +
+      '          <article class="grant-card grant-card-muted">\n' +
+      '            <div class="card-kicker"><span>EMP-4482</span><span>ISO · VESTED</span></div>\n' +
+      '            <p class="grant-value">2,000 <span>shares</span></p>\n' +
+      '            <p class="grant-secondary">87 days remaining · outside this model</p>\n' +
+      '            <p class="clause">Shown to prove the live <code>grant_id</code> enum is page-owned, not invented by an agent.</p>\n' +
+      '          </article>\n' +
+      '        </div>\n' +
+      '      </section>\n' +
+      '\n' +
+      '      <section id="crossover" class="section-shell section-block comparison-section">\n' +
+      '        <div class="section-heading">\n' +
+      '          <div>\n' +
+      '            <p class="eyebrow">THE CROSSOVER</p>\n' +
+      '            <h2>Buying everything costs less than the modeled tax proxy.</h2>\n' +
+      '          </div>\n' +
+      '          <span class="signal signal-warning">57,562 &gt; 41,400</span>\n' +
+      '        </div>\n' +
+      '        <div class="comparison-grid">\n' +
+      '          <article class="comparison-card comparison-risk">\n' +
+      '            <p class="comparison-label">FULL EXERCISE</p>\n' +
+      '            <h3>18,400 shares</h3>\n' +
+      '            <div class="big-money">$41,400.00 <span>cash</span></div>\n' +
+      '            <dl>\n' +
+      '              <div><dt>Line 2i adjustment</dt><dd>$276,000.00</dd></div>\n' +
+      '              <div><dt>AMTI in this model</dt><dd>$456,000.00</dd></div>\n' +
+      '              <div><dt>Tentative minimum tax</dt><dd>$97,562.00</dd></div>\n' +
+      '              <div class="risk-line"><dt>Modeled incremental proxy</dt><dd>$57,562.00</dd></div>\n' +
+      '            </dl>\n' +
+      '            <p class="comparison-note">Therefore bigger than the cash cost in this synthetic case.</p>\n' +
+      '          </article>\n' +
+      '          <article class="comparison-card comparison-safe">\n' +
+      '            <p class="comparison-label">LAST ZERO-PROXY POINT</p>\n' +
+      '            <h3>4,263 shares</h3>\n' +
+      '            <div class="big-money">$9,591.75 <span>cash</span></div>\n' +
+      '            <dl>\n' +
+      '              <div><dt>Line 2i adjustment</dt><dd>$63,945.00</dd></div>\n' +
+      '              <div><dt>Tentative minimum tax</dt><dd>$39,999.70</dd></div>\n' +
+      '              <div><dt>Modeled incremental proxy</dt><dd>$0.00</dd></div>\n' +
+      '              <div class="next-line"><dt>Share 4,264</dt><dd>$3.60 proxy</dd></div>\n' +
+      '            </dl>\n' +
+      '            <p class="comparison-note">Binary search proves the 0 / $3.60 boundary.</p>\n' +
+      '          </article>\n' +
+      '        </div>\n' +
+      '      </section>\n' +
+      '\n' +
+      '      <section id="derivation" class="section-shell section-block derivation-section">\n' +
+      '        <div class="section-heading">\n' +
+      '          <div>\n' +
+      '            <p class="eyebrow">FORM 6251 DERIVATION</p>\n' +
+      '            <h2>No mystery multiplier.</h2>\n' +
+      '          </div>\n' +
+      '          <span class="source-chip">Rev. Proc. 2025-45</span>\n' +
+      '        </div>\n' +
+      '        <div class="math-tape" aria-label="Synthetic tax derivation">\n' +
+      '          <div><span>2026 filing status</span><strong>Single</strong></div>\n' +
+      '          <div><span>Baseline AMTI</span><strong>$180,000.00</strong></div>\n' +
+      '          <div><span>Exemption</span><strong>$90,100.00</strong></div>\n' +
+      '          <div><span>Phaseout starts</span><strong>$500,000.00</strong></div>\n' +
+      '          <div><span>26 / 28% breakpoint</span><strong>$244,500.00</strong></div>\n' +
+      '          <div><span>Integer representation</span><strong>cents ×100</strong></div>\n' +
+      '        </div>\n' +
+      '        <p class="source-line">26 U.S.C. §56(a)(3) · Form 6251 line 2i (2025 instructions) · 2026 indexed values in Rev. Proc. 2025-45 §§3.10–3.11</p>\n' +
+      '      </section>\n' +
+      '\n' +
+      '      <section id="registry" class="section-shell section-block registry-section">\n' +
+      '        <div class="registry-copy">\n' +
+      '          <p class="eyebrow">PAGE-OWNED TOOL SURFACE</p>\n' +
+      '          <h2><span data-testid="live-registry-count">4</span> live. Max 6 live tools.</h2>\n' +
+      '          <p>\n' +
+      '            The page mints the valid <code>grant_id</code> enum from this account. Model first,\n' +
+      '            then Prepare appears. Prepare an exact match, then Submit appears. When the calendar\n' +
+      '            passes the deadline, Submit disappears.\n' +
+      '          </p>\n' +
+      '          <a href="https://github.com/webmachinelearning/webmcp/issues/255">webmachinelearning/webmcp#255</a>\n' +
+      '        </div>\n' +
+      '        <div class="registry-panel">\n' +
+      '          <div class="registry-status-row">\n' +
+      '            <span class="signal" data-testid="runtime-mode">MANUAL MODE · WEBMCP WAITING</span>\n' +
+      '            <span class="signal signal-live" data-testid="blackout-status">WINDOW OPEN</span>\n' +
+      '            <span class="signal signal-warning" data-testid="window-closed-chip" hidden>DEADLINE PASSED</span>\n' +
+      '          </div>\n' +
+      '          <ul class="tool-list" data-testid="registry-list">\n' +
+      '            <li>list_grants</li><li>get_plan_clause</li><li>model_exercise</li><li>find_amt_crossover</li>\n' +
+      '          </ul>\n' +
+      '          <p class="registry-footnote">Runtime enum: <code>EMP-4471 | EMP-4482</code></p>\n' +
+      '        </div>\n' +
+      '      </section>\n' +
+      '\n' +
+      '      <section id="forms" class="section-shell section-block action-section">\n' +
+      '        <div class="section-heading">\n' +
+      '          <div>\n' +
+      '            <p class="eyebrow">SIMULATED EXERCISE DESK</p>\n' +
+      '            <h2>Model. Prepare. Confirm.</h2>\n' +
+      '          </div>\n' +
+      '          <span class="signal">NO MONEY MOVES</span>\n' +
+      '        </div>\n' +
+      '        <div class="action-grid">\n' +
+      '          <div class="action-controls">\n' +
+      '            <label for="share-count">Shares to model</label>\n' +
+      '            <div class="input-wrap"><input id="share-count" data-testid="share-input" type="number" min="1" max="18400" step="1" value="4263" /><span>/ 18,400</span></div>\n' +
+      '            <div class="button-stack">\n' +
+      '              <button class="button button-primary" data-testid="model-action">1 · Model exercise</button>\n' +
+      '              <button class="button button-secondary" data-testid="prepare-action" disabled>2 · Prepare exact order</button>\n' +
+      '            </div>\n' +
+      '            <label class="confirmation">\n' +
+      '              <input type="checkbox" data-testid="human-confirm" />\n' +
+      '              <span>I understand this is a synthetic, simulated submission.</span>\n' +
+      '            </label>\n' +
+      '            <button class="button button-danger" data-testid="submit-action" disabled>3 · Submit simulation</button>\n' +
+      '            <button class="deadline-toggle" data-testid="advance-past-deadline" aria-pressed="false">Advance past deadline</button>\n' +
+      '          </div>\n' +
+      '          <div class="receipt-panel">\n' +
+      '            <div class="receipt-top"><span>PAGE RECEIPT</span><span>UNCOMMITTED</span></di'... 1206 more characters
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  actual: |-
+    <!doctype html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#071915" />
+        <title>Ninety Days — make the window count</title>
+        <meta http-equiv="origin-trial" content="[PUBLIC_ORIGIN_TRIAL_TOKEN_REDACTED_FROM_PROVENANCE]">
+        <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23071915'/%3E%3Cpath d='M20 19h24v8H30v6h12v8H30v4h14v8H20z' fill='%23b9f54a'/%3E%3C/svg%3E" />
+        <link rel="stylesheet" href="./styles.css" />
+      </head>
+      <body>
+        <header class="site-header">
+          <a class="wordmark" href="#landing" aria-label="Ninety Days home">
+            <span class="wordmark-mark">90</span>
+            <span>NINETY DAYS</span>
+          </a>
+          <nav aria-label="Primary navigation">
+            <a href="#account">Grant</a>
+            <a href="#derivation">Tax model</a>
+            <a href="#registry">Agent tools</a>
+          </nav>
+          <span class="privacy-pill">LOCAL · NO ACCOUNT</span>
+        </header>
+    
+        <main>
+          <section id="landing" class="hero section-shell">
+            <div class="hero-copy">
+              <p class="eyebrow">YOUR NINETY DAYS</p>
+              <h1>Make the option window count.</h1>
+              <p class="hero-lede">
+                See the cash, the Form 6251 adjustment, and the exact crossover before a
+                post-employment option window closes.
+              </p>
+              <div class="hero-actions">
+                <a class="button button-primary" href="#forms">Model 4,263 shares</a>
+                <a class="button button-secondary" href="#derivation">Show the math</a>
+              </div>
+              <p class="statute-note">
+                “90-day” is product shorthand. The statute uses <strong>3 months; plan date controls.</strong>
+              </p>
+            </div>
+            <aside id="countdown" class="countdown-card" aria-label="12 days remaining in exercise window">
+              <div class="countdown-topline">
+                <span>EMP-4471</span>
+                <span class="signal signal-live">ACTION WINDOW</span>
+              </div>
+              <div class="countdown-number" data-testid="countdown-days">12</div>
+              <div class="countdown-label">days remaining</div>
+              <div class="countdown-clock" data-testid="countdown-clock">00:04:17</div>
+              <time class="countdown-date" datetime="2026-09-03">Deadline · 03 Sep 2026</time>
+              <p>Plan §6.3 — the post-termination period starts on the last day worked.</p>
+            </aside>
+          </section>
+    
+          <section id="account" class="section-shell section-block">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">EQUITY ACCOUNT</p>
+                <h2>One decision. Every assumption visible.</h2>
+              </div>
+              <span class="updated">Synthetic snapshot · 2026</span>
+            </div>
+            <div class="account-grid">
+              <article class="grant-card grant-card-primary">
+                <div class="card-kicker"><span>EMP-4471</span><span>ISO · VESTED</span></div>
+                <p class="grant-value">18,400 <span>shares</span></p>
+                <div class="metric-row"><span>Exercise price</span><strong>$2.25</strong></div>
+                <div class="metric-row"><span>Synthetic FMV</span><strong>$17.25</strong></div>
+                <div class="metric-row"><span>Exercise all</span><strong>$41,400.00</strong></div>
+                <p class="clause">Plan §6.3 — the post-termination period starts on the last day worked. The plan deadline controls.</p>
+              </article>
+              <article class="grant-card grant-card-muted">
+                <div class="card-kicker"><span>EMP-4482</span><span>ISO · VESTED</span></div>
+                <p class="grant-value">2,000 <span>shares</span></p>
+                <p class="grant-secondary">87 days remaining · outside this model</p>
+                <p class="clause">Shown to prove the live <code>grant_id</code> enum is page-owned, not invented by an agent.</p>
+              </article>
+            </div>
+          </section>
+    
+          <section id="crossover" class="section-shell section-block comparison-section">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">THE CROSSOVER</p>
+                <h2>Buying everything costs less than the modeled tax proxy.</h2>
+              </div>
+              <span class="signal signal-warning">57,562 &gt; 41,400</span>
+            </div>
+            <div class="comparison-grid">
+              <article class="comparison-card comparison-risk">
+                <p class="comparison-label">FULL EXERCISE</p>
+                <h3>18,400 shares</h3>
+                <div class="big-money">$41,400.00 <span>cash</span></div>
+                <dl>
+                  <div><dt>Line 2i adjustment</dt><dd>$276,000.00</dd></div>
+                  <div><dt>AMTI in this model</dt><dd>$456,000.00</dd></div>
+                  <div><dt>Tentative minimum tax</dt><dd>$97,562.00</dd></div>
+                  <div class="risk-line"><dt>Modeled incremental proxy</dt><dd>$57,562.00</dd></div>
+                </dl>
+                <p class="comparison-note">Therefore bigger than the cash cost in this synthetic case.</p>
+              </article>
+              <article class="comparison-card comparison-safe">
+                <p class="comparison-label">LAST ZERO-PROXY POINT</p>
+                <h3>4,263 shares</h3>
+                <div class="big-money">$9,591.75 <span>cash</span></div>
+                <dl>
+                  <div><dt>Line 2i adjustment</dt><dd>$63,945.00</dd></div>
+                  <div><dt>Tentative minimum tax</dt><dd>$39,999.70</dd></div>
+                  <div><dt>Modeled incremental proxy</dt><dd>$0.00</dd></div>
+                  <div class="next-line"><dt>Share 4,264</dt><dd>$3.60 proxy</dd></div>
+                </dl>
+                <p class="comparison-note">Binary search proves the 0 / $3.60 boundary.</p>
+              </article>
+            </div>
+          </section>
+    
+          <section id="derivation" class="section-shell section-block derivation-section">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">FORM 6251 DERIVATION</p>
+                <h2>No mystery multiplier.</h2>
+              </div>
+              <span class="source-chip">Rev. Proc. 2025-45</span>
+            </div>
+            <div class="math-tape" aria-label="Synthetic tax derivation">
+              <div><span>2026 filing status</span><strong>Single</strong></div>
+              <div><span>Baseline AMTI</span><strong>$180,000.00</strong></div>
+              <div><span>Exemption</span><strong>$90,100.00</strong></div>
+              <div><span>Phaseout starts</span><strong>$500,000.00</strong></div>
+              <div><span>26 / 28% breakpoint</span><strong>$244,500.00</strong></div>
+              <div><span>Integer representation</span><strong>cents ×100</strong></div>
+            </div>
+            <p class="source-line">26 U.S.C. §56(a)(3) · Form 6251 line 2i (2025 instructions) · 2026 indexed values in Rev. Proc. 2025-45 §§3.10–3.11</p>
+          </section>
+    
+          <section id="registry" class="section-shell section-block registry-section">
+            <div class="registry-copy">
+              <p class="eyebrow">PAGE-OWNED TOOL SURFACE</p>
+              <h2><span data-testid="live-registry-count">4</span> live. Max 6 live tools.</h2>
+              <p>
+                The page mints the valid <code>grant_id</code> enum from this account. Model first,
+                then Prepare appears. Prepare an exact match, then Submit appears. When the calendar
+                passes the deadline, Submit disappears.
+              </p>
+              <a href="https://github.com/webmachinelearning/webmcp/issues/255">webmachinelearning/webmcp#255</a>
+            </div>
+            <div class="registry-panel">
+              <div class="registry-status-row">
+                <span class="signal" data-testid="runtime-mode">MANUAL MODE · WEBMCP WAITING</span>
+                <span class="signal signal-live" data-testid="blackout-status">WINDOW OPEN</span>
+                <span class="signal signal-warning" data-testid="window-closed-chip" hidden>DEADLINE PASSED</span>
+              </div>
+              <ul class="tool-list" data-testid="registry-list">
+                <li>list_grants</li><li>get_plan_clause</li><li>model_exercise</li><li>find_amt_crossover</li>
+              </ul>
+              <p class="registry-footnote">Runtime enum: <code>EMP-4471 | EMP-4482</code></p>
+            </div>
+          </section>
+    
+          <section id="forms" class="section-shell section-block action-section">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">SIMULATED EXERCISE DESK</p>
+                <h2>Model. Prepare. Confirm.</h2>
+              </div>
+              <span class="signal">NO MONEY MOVES</span>
+            </div>
+            <div class="action-grid">
+              <div class="action-controls">
+                <label for="share-count">Shares to model</label>
+                <div class="input-wrap"><input id="share-count" data-testid="share-input" type="number" min="1" max="18400" step="1" value="4263" /><span>/ 18,400</span></div>
+                <div class="button-stack">
+                  <button class="button button-primary" data-testid="model-action">1 · Model exercise</button>
+                  <button class="button button-secondary" data-testid="prepare-action" disabled>2 · Prepare exact order</button>
+                </div>
+                <label class="confirmation">
+                  <input type="checkbox" data-testid="human-confirm" />
+                  <span>I understand this is a synthetic, simulated submission.</span>
+                </label>
+                <button class="button button-danger" data-testid="submit-action" disabled>3 · Submit simulation</button>
+                <button class="deadline-toggle" data-testid="advance-past-deadline" aria-pressed="false">Advance past deadline</button>
+              </div>
+              <div class="receipt-panel">
+                <div class="receipt-top"><span>PAGE RECEIPT</span><span>UNCOMMITTED</span></div>
+                <pre data-testid="action-receipt">{
+      "status": "waiting_for_model",
+      "binding": false,
+      "synthetic": true
+    }</pre>
+              </div>
+            </div>
+          </section>
+    
+          <section id="disclosure" class="section-shell disclosure-section">
+            <p class="eyebrow">MODEL BOUNDARY</p>
+            <h2>Synthetic by design. Sources in the open.</h2>
+            <p class="boundary">Synthetic 2026 federal ordinary-income model. Form 6251 line 2i AMT adjustment proxy — not AMT owed. The statute uses 3 months; the plan date controls.</p>
+            <p>This demonstration is not tax or legal advice. It does not file a return, connect to a brokerage, move money, or decide whether a real option remains exercisable.</p>
+            <div class="exclusions">
+              <span>State tax</span><span>NIIT</span><span>AMT credits</span><span>Prior-year adjustments</span>
+              <span>Grant ordering</span><span>Foreign tax</span><span>Plan interpretation</span><span>Funding</span>
+            </div>
+          </section>
+        </main>
+    
+        <footer><span>NINETY DAYS</span><span>Local-first · synthetic demonstration · no backend</span></footer>
+        <script type="module" src="./src/app.mjs"></script>
+      </body>
+    </html>
+    
+  operator: 'match'
+  stack: |-
+    TestContext.<anonymous> (file:///home/hungson175/dev/earning-money/project/freelance-hunter/artifacts/ninety-days-webmcp/tests/countdown_calendar.test.mjs:14:10)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+  ...
+# Subtest: calendar expiry removes submit_exercise from the page-owned catalog
+ok 2 - calendar expiry removes submit_exercise from the page-owned catalog
+  ---
+  duration_ms: 2.833511
+  type: 'test'
+  ...
+# Subtest: a stale submit fails closed after the calendar deadline
+ok 3 - a stale submit fails closed after the calendar deadline
+  ---
+  duration_ms: 1.146543
+  type: 'test'
+  ...
+# Subtest: the calendar transition is guarded by a trusted human event, not a tool
+ok 4 - the calendar transition is guarded by a trusted human event, not a tool
+  ---
+  duration_ms: 3.537428
+  type: 'test'
+  ...
+# Subtest: calendar-desktop visibly closes the window and removes submit_exercise
+not ok 5 - calendar-desktop visibly closes the window and removes submit_exercise
+  ---
+  duration_ms: 6645.055085
+  type: 'test'
+  location: '/home/hungson175/dev/earning-money/project/freelance-hunter/artifacts/ninety-days-webmcp/tests/countdown_calendar_browser.test.mjs:16:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    
+    127.0.0.1 - - [02/Sep/2026 03:20:53] "GET / HTTP/1.1" 200 -
+    127.0.0.1 - - [02/Sep/2026 03:20:53] "GET /styles.css HTTP/1.1" 200 -
+    127.0.0.1 - - [02/Sep/2026 03:20:53] "GET /src/app.mjs HTTP/1.1" 200 -
+    127.0.0.1 - - [02/Sep/2026 03:20:53] "GET /src/tax/amt_6251.mjs HTTP/1.1" 200 -
+    127.0.0.1 - - [02/Sep/2026 03:20:53] "GET /src/webmcp_adapter.mjs HTTP/1.1" 200 -
+    127.0.0.1 - - [02/Sep/2026 03:20:53] "GET /src/catalog.mjs HTTP/1.1" 200 -
+    Traceback (most recent call last):
+      File "/home/hungson175/dev/earning-money/project/freelance-hunter/artifacts/ninety-days-webmcp/scripts/product_shell_browser_check.py", line 172, in <module>
+        print(json.dumps(run(args.mode), sort_keys=True))
+      File "/home/hungson175/dev/earning-money/project/freelance-hunter/artifacts/ninety-days-webmcp/scripts/product_shell_browser_check.py", line 79, in run
+        ).inner_text(),
+      File "/home/hungson175/.local/lib/python3.10/site-packages/playwright/sync_api/_generated.py", line 17093, in inner_text
+        self._sync(self._impl_obj.inner_text(timeout=timeout))
+      File "/home/hungson175/.local/lib/python3.10/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+        return task.result()
+      File "/home/hungson175/.local/lib/python3.10/site-packages/playwright/_impl/_locator.py", line 476, in inner_text
+        return await self._frame.inner_text(
+      File "/home/hungson175/.local/lib/python3.10/site-packages/playwright/_impl/_frame.py", line 712, in inner_text
+        return await self._channel.send(
+      File "/home/hungson175/.local/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 69, in send
+        return await self._connection.wrap_api_call(
+      File "/home/hungson175/.local/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+        raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+    playwright._impl._errors.TimeoutError: Locator.inner_text: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for get_by_test_id("countdown-window-status")
+    
+    
+    
+    1 !== 0
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 0
+  actual: 1
+  operator: 'strictEqual'
+  stack: |-
+    runBrowser (file:///home/hungson175/dev/earning-money/project/freelance-hunter/artifacts/ninety-days-webmcp/tests/countdown_calendar_browser.test.mjs:11:10)
+    TestContext.<anonymous> (file:///home/hungson175/dev/earning-money/project/freelance-hunter/artifacts/ninety-days-webmcp/tests/countdown_calendar_browser.test.mjs:17:21)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.start (node:internal/test_runner/test:944:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:296:17)
+  ...
+# Subtest: calendar-mobile visibly closes the window and removes submit_exercise
+not ok 6 - calendar-mobile visibly closes the window and removes submit_exercise
+  ---
+  duration_ms: 6674.108001
+  type: 'test'
+  location: '/home/hungson175/dev/earning-money/project/freelance-hunter/artifacts/ninety-days-webmcp/tests/countdown_calendar_browser.test.mjs:16:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    
+    127.0.0.1 - - [02/Sep/2026 03:21:00] "GET / HTTP/1.1" 200 -
+    127.0.0.1 - - [02/Sep/2026 03:21:00] "GET /styles.css HTTP/1.1" 200 -
+    127.0.0.1 - - [02/Sep/2026 03:21:00] "GET /src/app.mjs HTTP/1.1" 200 -
+    127.0.0.1 - - [02/Sep/2026 03:21:00] "GET /src/catalog.mjs HTTP/1.1" 200 -
+    127.0.0.1 - - [02/Sep/2026 03:21:00] "GET /src/tax/amt_6251.mjs HTTP/1.1" 200 -
+    127.0.0.1 - - [02/Sep/2026 03:21:00] "GET /src/webmcp_adapter.mjs HTTP/1.1" 200 -
+    Traceback (most recent call last):
+      File "/home/hungson175/dev/earning-money/project/freelance-hunter/artifacts/ninety-days-webmcp/scripts/product_shell_browser_check.py", line 172, in <module>
+        print(json.dumps(run(args.mode), sort_keys=True))
+      File "/home/hungson175/dev/earning-money/project/freelance-hunter/artifacts/ninety-days-webmcp/scripts/product_shell_browser_check.py", line 79, in run
+        ).inner_text(),
+      File "/home/hungson175/.local/lib/python3.10/site-packages/playwright/sync_api/_generated.py", line 17093, in inner_text
+        self._sync(self._impl_obj.inner_text(timeout=timeout))
+      File "/home/hungson175/.local/lib/python3.10/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+        return task.result()
+      File "/home/hungson175/.local/lib/python3.10/site-packages/playwright/_impl/_locator.py", line 476, in inner_text
+        return await self._frame.inner_text(
+      File "/home/hungson175/.local/lib/python3.10/site-packages/playwright/_impl/_frame.py", line 712, in inner_text
+        return await self._channel.send(
+      File "/home/hungson175/.local/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 69, in send
+        return await self._connection.wrap_api_call(
+      File "/home/hungson175/.local/lib/python3.10/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+        raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+    playwright._impl._errors.TimeoutError: Locator.inner_text: Timeout 5000ms exceeded.
+    Call log:
+      - waiting for get_by_test_id("countdown-window-status")
+    
+    
+    
+    1 !== 0
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 0
+  actual: 1
+  operator: 'strictEqual'
+  stack: |-
+    runBrowser (file:///home/hungson175/dev/earning-money/project/freelance-hunter/artifacts/ninety-days-webmcp/tests/countdown_calendar_browser.test.mjs:11:10)
+    TestContext.<anonymous> (file:///home/hungson175/dev/earning-money/project/freelance-hunter/artifacts/ninety-days-webmcp/tests/countdown_calendar_browser.test.mjs:17:21)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+  ...
+1..6
+# tests 6
+# suites 0
+# pass 3
+# fail 3
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 13384.51391
+
+RED_EXIT=1

@@ -43,12 +43,13 @@
         <aside id="countdown" class="countdown-card" aria-label="12 days remaining in exercise window">
           <div class="countdown-topline">
             <span>EMP-4471</span>
-            <span class="signal signal-live">ACTION WINDOW</span>
+            <span class="signal signal-live" data-testid="countdown-window-status">ACTION WINDOW</span>
           </div>
           <div class="countdown-number" data-testid="countdown-days">12</div>
           <div class="countdown-label">days remaining</div>
           <div class="countdown-clock" data-testid="countdown-clock">00:04:17</div>
-          <p>Plan §6.3 · clock starts on the last day worked</p>
+          <time class="countdown-date" datetime="2026-09-03">Deadline · 03 Sep 2026</time>
+          <p>Plan §6.3 — the post-termination period starts on the last day worked.</p>
         </aside>
       </section>
 
@@ -139,7 +140,8 @@
           <h2><span data-testid="live-registry-count">4</span> live. Max 6 live tools.</h2>
           <p>
             The page mints the valid <code>grant_id</code> enum from this account. Model first,
-            then Prepare appears. Prepare an exact match, then Submit appears. A blackout removes it.
+            then Prepare appears. Prepare an exact match, then Submit appears. When the calendar
+            passes the deadline, Submit disappears.
           </p>
           <a href="https://github.com/webmachinelearning/webmcp/issues/255">webmachinelearning/webmcp#255</a>
         </div>
@@ -147,6 +149,7 @@
           <div class="registry-status-row">
             <span class="signal" data-testid="runtime-mode">MANUAL MODE · WEBMCP WAITING</span>
             <span class="signal signal-live" data-testid="blackout-status">WINDOW OPEN</span>
+            <span class="signal signal-warning" data-testid="window-closed-chip" hidden>DEADLINE PASSED</span>
           </div>
           <ul class="tool-list" data-testid="registry-list">
             <li>list_grants</li><li>get_plan_clause</li><li>model_exercise</li><li>find_amt_crossover</li>
@@ -176,7 +179,7 @@
               <span>I understand this is a synthetic, simulated submission.</span>
             </label>
             <button class="button button-danger" data-testid="submit-action" disabled>3 · Submit simulation</button>
-            <button class="blackout-toggle" data-testid="blackout-toggle" aria-pressed="false">Simulate blackout</button>
+            <button class="deadline-toggle" data-testid="advance-past-deadline" aria-pressed="false">Advance past deadline</button>
           </div>
           <div class="receipt-panel">
             <div class="receipt-top"><span>PAGE RECEIPT</span><span>UNCOMMITTED</span></div>

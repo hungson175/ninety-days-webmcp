@@ -1,0 +1,48 @@
+TAP version 13
+# Subtest: makes the dated countdown and plan clause the visible decision headline
+ok 1 - makes the dated countdown and plan clause the visible decision headline
+  ---
+  duration_ms: 6.23574
+  type: 'test'
+  ...
+# Subtest: calendar expiry removes submit_exercise from the page-owned catalog
+ok 2 - calendar expiry removes submit_exercise from the page-owned catalog
+  ---
+  duration_ms: 2.431836
+  type: 'test'
+  ...
+# Subtest: a stale submit fails closed after the calendar deadline
+ok 3 - a stale submit fails closed after the calendar deadline
+  ---
+  duration_ms: 1.283867
+  type: 'test'
+  ...
+# Subtest: the calendar transition is guarded by a trusted human event, not a tool
+ok 4 - the calendar transition is guarded by a trusted human event, not a tool
+  ---
+  duration_ms: 2.840749
+  type: 'test'
+  ...
+# Subtest: calendar-desktop visibly closes the window and removes submit_exercise
+ok 5 - calendar-desktop visibly closes the window and removes submit_exercise
+  ---
+  duration_ms: 1628.264661
+  type: 'test'
+  ...
+# Subtest: calendar-mobile visibly closes the window and removes submit_exercise
+ok 6 - calendar-mobile visibly closes the window and removes submit_exercise
+  ---
+  duration_ms: 1623.006463
+  type: 'test'
+  ...
+1..6
+# tests 6
+# suites 0
+# pass 6
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 3316.139409
+
+GREEN_EXIT=0

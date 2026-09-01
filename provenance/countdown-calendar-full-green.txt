@@ -1,0 +1,268 @@
+
+> test
+> node --test
+
+TAP version 13
+# Subtest: uses the 2026 exemption and 50 percent phaseout table
+ok 1 - uses the 2026 exemption and 50 percent phaseout table
+  ---
+  duration_ms: 2.496015
+  type: 'test'
+  ...
+# Subtest: applies 26 percent then 28 percent above the 2026 breakpoint
+ok 2 - applies 26 percent then 28 percent above the 2026 breakpoint
+  ---
+  duration_ms: 0.291027
+  type: 'test'
+  ...
+# Subtest: computes the line 2i adjustment proxy in integer cents
+ok 3 - computes the line 2i adjustment proxy in integer cents
+  ---
+  duration_ms: 0.212066
+  type: 'test'
+  ...
+# Subtest: matches the source-corrected full-exercise synthetic fixture
+ok 4 - matches the source-corrected full-exercise synthetic fixture
+  ---
+  duration_ms: 0.932838
+  type: 'test'
+  ...
+# Subtest: finds the exact last share count with zero modeled incremental proxy
+ok 5 - finds the exact last share count with zero modeled incremental proxy
+  ---
+  duration_ms: 0.597389
+  type: 'test'
+  ...
+# Subtest: refuses unsupported years and incomplete disposition facts
+ok 6 - refuses unsupported years and incomplete disposition facts
+  ---
+  duration_ms: 0.575024
+  type: 'test'
+  ...
+# Subtest: exports the exact synthetic and source boundary for the UI
+ok 7 - exports the exact synthetic and source boundary for the UI
+  ---
+  duration_ms: 0.257675
+  type: 'test'
+  ...
+# Subtest: mints a closed runtime grant_id enum from the live grant set
+ok 8 - mints a closed runtime grant_id enum from the live grant set
+  ---
+  duration_ms: 1.969239
+  type: 'test'
+  ...
+# Subtest: catalog schemas reject a hallucinated grant id before execution
+ok 9 - catalog schemas reject a hallucinated grant id before execution
+  ---
+  duration_ms: 0.919852
+  type: 'test'
+  ...
+# Subtest: never exposes more than six tools and reveals guarded writes progressively
+ok 10 - never exposes more than six tools and reveals guarded writes progressively
+  ---
+  duration_ms: 0.573261
+  type: 'test'
+  ...
+# Subtest: blackout removes submit_exercise without weakening the execution guard
+ok 11 - blackout removes submit_exercise without weakening the execution guard
+  ---
+  duration_ms: 0.425322
+  type: 'test'
+  ...
+# Subtest: aborted calls do not mutate model or prepared state
+ok 12 - aborted calls do not mutate model or prepared state
+  ---
+  duration_ms: 0.617699
+  type: 'test'
+  ...
+# Subtest: model_exercise returns the exact source-pinned synthetic derivation
+ok 13 - model_exercise returns the exact source-pinned synthetic derivation
+  ---
+  duration_ms: 2.769659
+  type: 'test'
+  ...
+# Subtest: find_amt_crossover returns the last zero-proxy share and the next-share boundary
+ok 14 - find_amt_crossover returns the last zero-proxy share and the next-share boundary
+  ---
+  duration_ms: 0.853193
+  type: 'test'
+  ...
+# Subtest: plan tool uses three-month source wording without claiming universal cancellation
+ok 15 - plan tool uses three-month source wording without claiming universal cancellation
+  ---
+  duration_ms: 0.270558
+  type: 'test'
+  ...
+# Subtest: makes the dated countdown and plan clause the visible decision headline
+ok 16 - makes the dated countdown and plan clause the visible decision headline
+  ---
+  duration_ms: 5.581078
+  type: 'test'
+  ...
+# Subtest: calendar expiry removes submit_exercise from the page-owned catalog
+ok 17 - calendar expiry removes submit_exercise from the page-owned catalog
+  ---
+  duration_ms: 1.413915
+  type: 'test'
+  ...
+# Subtest: a stale submit fails closed after the calendar deadline
+ok 18 - a stale submit fails closed after the calendar deadline
+  ---
+  duration_ms: 0.849482
+  type: 'test'
+  ...
+# Subtest: the calendar transition is guarded by a trusted human event, not a tool
+ok 19 - the calendar transition is guarded by a trusted human event, not a tool
+  ---
+  duration_ms: 1.565865
+  type: 'test'
+  ...
+# Subtest: calendar-desktop visibly closes the window and removes submit_exercise
+ok 20 - calendar-desktop visibly closes the window and removes submit_exercise
+  ---
+  duration_ms: 1643.30202
+  type: 'test'
+  ...
+# Subtest: calendar-mobile visibly closes the window and removes submit_exercise
+ok 21 - calendar-mobile visibly closes the window and removes submit_exercise
+  ---
+  duration_ms: 1712.563125
+  type: 'test'
+  ...
+# Subtest: uses the exact shared origin-trial token once before the app module
+ok 22 - uses the exact shared origin-trial token once before the app module
+  ---
+  duration_ms: 5.771612
+  type: 'test'
+  ...
+# Subtest: ships an MIT license with the public maintainer identity
+ok 23 - ships an MIT license with the public maintainer identity
+  ---
+  duration_ms: 1.741606
+  type: 'test'
+  ...
+# Subtest: README takes a cold reviewer from clone to tests and static serve
+ok 24 - README takes a cold reviewer from clone to tests and static serve
+  ---
+  duration_ms: 1.104194
+  type: 'test'
+  ...
+# Subtest: 404 fallback is byte-identical to the project-path-safe entry page
+ok 25 - 404 fallback is byte-identical to the project-path-safe entry page
+  ---
+  duration_ms: 2.718701
+  type: 'test'
+  ...
+# Subtest: uses a real static serve command without an uninstalled build stack
+ok 26 - uses a real static serve command without an uninstalled build stack
+  ---
+  duration_ms: 0.864707
+  type: 'test'
+  ...
+# Subtest: desktop package exposes one early origin meta and the complete fallback page
+ok 27 - desktop package exposes one early origin meta and the complete fallback page
+  ---
+  duration_ms: 2248.636793
+  type: 'test'
+  ...
+# Subtest: mobile package preserves the cold manual product path
+ok 28 - mobile package preserves the cold manual product path
+  ---
+  duration_ms: 1661.160548
+  type: 'test'
+  ...
+# Subtest: ships a finished account shell with the source-corrected clock
+ok 29 - ships a finished account shell with the source-corrected clock
+  ---
+  duration_ms: 4.724017
+  type: 'test'
+  ...
+# Subtest: pins the visible derivation to the corrected 2026 integer-cent fixture
+ok 30 - pins the visible derivation to the corrected 2026 integer-cent fixture
+  ---
+  duration_ms: 14.756214
+  type: 'test'
+  ...
+# Subtest: starts with four scoped tools and progressively reveals five then six
+ok 31 - starts with four scoped tools and progressively reveals five then six
+  ---
+  duration_ms: 1.769649
+  type: 'test'
+  ...
+# Subtest: native registered calls re-sync the live catalog and product snapshot
+ok 32 - native registered calls re-sync the live catalog and product snapshot
+  ---
+  duration_ms: 0.893154
+  type: 'test'
+  ...
+# Subtest: requires exact model then prepare and a human confirmation before simulated submit
+ok 33 - requires exact model then prepare and a human confirmation before simulated submit
+  ---
+  duration_ms: 0.518649
+  type: 'test'
+  ...
+# Subtest: deregisters submit during blackout and preserves the structured refusal
+ok 34 - deregisters submit during blackout and preserves the structured refusal
+  ---
+  duration_ms: 0.483547
+  type: 'test'
+  ...
+# Subtest: renders the six-tool cap, source provenance, and synthetic boundary in product copy
+ok 35 - renders the six-tool cap, source provenance, and synthetic boundary in product copy
+  ---
+  duration_ms: 2.60818
+  type: 'test'
+  ...
+# Subtest: keeps grants in memory and contains no backend or financial transport
+ok 36 - keeps grants in memory and contains no backend or financial transport
+  ---
+  duration_ms: 1.041663
+  type: 'test'
+  ...
+# Subtest: defines responsive financial-product styling rather than a debug console
+ok 37 - defines responsive financial-product styling rather than a debug console
+  ---
+  duration_ms: 0.809606
+  type: 'test'
+  ...
+# Subtest: desktop product flow is complete with AI off and guarded submit
+ok 38 - desktop product flow is complete with AI off and guarded submit
+  ---
+  duration_ms: 5733.410851
+  type: 'test'
+  ...
+# Subtest: mobile product has no horizontal overflow and keeps every core section readable
+ok 39 - mobile product has no horizontal overflow and keeps every core section readable
+  ---
+  duration_ms: 1651.625621
+  type: 'test'
+  ...
+# Subtest: re-registers the exact progressive catalog and aborts stale registrations
+ok 40 - re-registers the exact progressive catalog and aborts stale registrations
+  ---
+  duration_ms: 3.631599
+  type: 'test'
+  ...
+# Subtest: descriptors carry the runtime enum and execute through the session guard
+ok 41 - descriptors carry the runtime enum and execute through the session guard
+  ---
+  duration_ms: 0.73575
+  type: 'test'
+  ...
+# Subtest: fails closed and rolls back every registration when one registration fails
+ok 42 - fails closed and rolls back every registration when one registration fails
+  ---
+  duration_ms: 0.907049
+  type: 'test'
+  ...
+1..42
+# tests 42
+# suites 0
+# pass 42
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 7461.325827
+
+FULL_GREEN_EXIT=0

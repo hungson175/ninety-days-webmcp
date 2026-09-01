@@ -90,6 +90,7 @@ export function createProductController({ documentRef = null, onStateChange = nu
     return {
       toolNames: getSessionCatalog(session).map(({ name }) => name),
       blackout: state.blackout,
+      windowOpen: state.windowOpen,
       modeled: state.modeled,
       prepared: state.prepared,
       lastReceipt: clone(lastReceipt),
@@ -130,6 +131,10 @@ export function createProductController({ documentRef = null, onStateChange = nu
       session.setBlackout(value);
       return syncRuntime().then(snapshot);
     },
+    advancePastDeadline() {
+      session.setWindowOpen(false);
+      return syncRuntime().then(snapshot);
+    },
   };
 }
 
@@ -144,7 +149,8 @@ function initializeProduct(documentRef) {
   const modelButton = documentRef.querySelector('[data-testid="model-action"]');
   const prepareButton = documentRef.querySelector('[data-testid="prepare-action"]');
   const submitButton = documentRef.querySelector('[data-testid="submit-action"]');
-  const blackoutButton = documentRef.querySelector('[data-testid="blackout-toggle"]');
+  const deadlineButton = documentRef.querySelector('[data-testid="advance-past-deadline"]');
+  const windowClosedChip = documentRef.querySelector('[data-testid="window-closed-chip"]');
 
   function currentShares() {
     return Number.parseInt(shareInput?.value ?? '', 10);
@@ -159,8 +165,13 @@ function initializeProduct(documentRef) {
     );
     text(
       documentRef.querySelector('[data-testid="blackout-status"]'),
-      state.blackout ? 'BLACKOUT ACTIVE · SUBMIT REMOVED' : 'WINDOW OPEN',
+      state.windowOpen ? 'WINDOW OPEN' : 'WINDOW CLOSED · SUBMIT REMOVED',
     );
+    text(
+      documentRef.querySelector('[data-testid="countdown-window-status"]'),
+      state.windowOpen ? 'ACTION WINDOW' : 'WINDOW CLOSED',
+    );
+    windowClosedChip.hidden = state.windowOpen;
 
     const list = documentRef.querySelector('[data-testid="registry-list"]');
     if (list) {
@@ -178,10 +189,11 @@ function initializeProduct(documentRef) {
     const preparedExact = state.prepared?.shares === shares;
     modelButton.disabled = false;
     prepareButton.disabled = !modeledExact;
-    submitButton.disabled = !preparedExact || !humanConfirm.checked || state.blackout;
-    blackoutButton.disabled = false;
-    blackoutButton.setAttribute('aria-pressed', String(state.blackout));
-    text(blackoutButton, state.blackout ? 'End blackout simulation' : 'Simulate blackout');
+    submitButton.disabled =
+      !preparedExact || !humanConfirm.checked || state.blackout || !state.windowOpen;
+    deadlineButton.disabled = !state.windowOpen;
+    deadlineButton.setAttribute('aria-pressed', String(!state.windowOpen));
+    text(deadlineButton, state.windowOpen ? 'Advance past deadline' : 'Deadline passed');
 
     if (state.lastReceipt) {
       text(
@@ -192,7 +204,7 @@ function initializeProduct(documentRef) {
   }
 
   async function act(operation) {
-    for (const button of [modelButton, prepareButton, submitButton, blackoutButton]) {
+    for (const button of [modelButton, prepareButton, submitButton, deadlineButton]) {
       button.disabled = true;
     }
     try {
@@ -208,9 +220,6 @@ function initializeProduct(documentRef) {
   prepareButton.addEventListener('click', () => act(() => controller.prepare(currentShares())));
   submitButton.addEventListener('click', () =>
     act(() => controller.submit({ shares: currentShares(), humanConfirmed: humanConfirm.checked })),
-  );
-  blackoutButton.addEventListener('click', () =>
-    act(() => controller.setBlackout(!controller.snapshot().blackout)),
   );
   humanConfirm.addEventListener('change', render);
   shareInput.addEventListener('input', render);
@@ -228,6 +237,13 @@ function initializeProduct(documentRef) {
     );
     seconds = Math.max(0, seconds - 1);
   };
+  function advancePastDeadline(event) {
+    if (!event.isTrusted) return;
+    seconds = 0;
+    updateClock();
+    act(() => controller.advancePastDeadline());
+  }
+  deadlineButton.addEventListener('click', advancePastDeadline);
   updateClock();
   globalThis.setInterval(updateClock, 1_000);
 
