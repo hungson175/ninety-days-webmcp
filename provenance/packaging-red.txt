@@ -1,0 +1,101 @@
+TAP version 13
+# Subtest: uses the exact shared origin-trial token once before the app module
+not ok 1 - uses the exact shared origin-trial token once before the app module
+  ---
+  duration_ms: 6.101803
+  type: 'test'
+  location: '/home/hungson175/dev/earning-money/project/freelance-hunter/artifacts/ninety-days-webmcp/tests/packaging.test.mjs:15:1'
+  failureType: 'testCodeFailure'
+  error: 'origin-trial meta is absent'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  operator: '=='
+  stack: |-
+    TestContext.<anonymous> (file:///home/hungson175/dev/earning-money/project/freelance-hunter/artifacts/ninety-days-webmcp/tests/packaging.test.mjs:21:10)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+  ...
+# Subtest: ships an MIT license with the public maintainer identity
+not ok 2 - ships an MIT license with the public maintainer identity
+  ---
+  duration_ms: 1.992843
+  type: 'test'
+  location: '/home/hungson175/dev/earning-money/project/freelance-hunter/artifacts/ninety-days-webmcp/tests/packaging.test.mjs:27:1'
+  failureType: 'testCodeFailure'
+  error: "ENOENT: no such file or directory, open '/home/hungson175/dev/earning-money/project/freelance-hunter/artifacts/ninety-days-webmcp/LICENSE'"
+  code: 'ENOENT'
+  stack: |-
+    async open (node:internal/fs/promises:639:25)
+    async readFile (node:internal/fs/promises:1243:14)
+    async TestContext.<anonymous> (file:///home/hungson175/dev/earning-money/project/freelance-hunter/artifacts/ninety-days-webmcp/tests/packaging.test.mjs:28:19)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: README takes a cold reviewer from clone to tests and static serve
+not ok 3 - README takes a cold reviewer from clone to tests and static serve
+  ---
+  duration_ms: 2.337888
+  type: 'test'
+  location: '/home/hungson175/dev/earning-money/project/freelance-hunter/artifacts/ninety-days-webmcp/tests/packaging.test.mjs:34:1'
+  failureType: 'testCodeFailure'
+  error: "ENOENT: no such file or directory, open '/home/hungson175/dev/earning-money/project/freelance-hunter/artifacts/ninety-days-webmcp/README.md'"
+  code: 'ENOENT'
+  stack: |-
+    async open (node:internal/fs/promises:639:25)
+    async readFile (node:internal/fs/promises:1243:14)
+    async TestContext.<anonymous> (file:///home/hungson175/dev/earning-money/project/freelance-hunter/artifacts/ninety-days-webmcp/tests/packaging.test.mjs:35:18)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: 404 fallback is byte-identical to the project-path-safe entry page
+not ok 4 - 404 fallback is byte-identical to the project-path-safe entry page
+  ---
+  duration_ms: 1.306762
+  type: 'test'
+  location: '/home/hungson175/dev/earning-money/project/freelance-hunter/artifacts/ninety-days-webmcp/tests/packaging.test.mjs:53:1'
+  failureType: 'testCodeFailure'
+  error: "ENOENT: no such file or directory, open '/home/hungson175/dev/earning-money/project/freelance-hunter/artifacts/ninety-days-webmcp/404.html'"
+  code: 'ENOENT'
+  stack: |-
+    async open (node:internal/fs/promises:639:25)
+    async readFile (node:internal/fs/promises:1243:14)
+    async Promise.all (index 1)
+    async TestContext.<anonymous> (file:///home/hungson175/dev/earning-money/project/freelance-hunter/artifacts/ninety-days-webmcp/tests/packaging.test.mjs:54:28)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: uses a real static serve command without an uninstalled build stack
+not ok 5 - uses a real static serve command without an uninstalled build stack
+  ---
+  duration_ms: 1.974393
+  type: 'test'
+  location: '/home/hungson175/dev/earning-money/project/freelance-hunter/artifacts/ninety-days-webmcp/tests/packaging.test.mjs:65:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + undefined
+    - 'python3 -m http.server 8000'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'python3 -m http.server 8000'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///home/hungson175/dev/earning-money/project/freelance-hunter/artifacts/ninety-days-webmcp/tests/packaging.test.mjs:68:10)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 0
+# fail 5
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 74.818345
+
+RED_EXIT=1

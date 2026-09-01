@@ -1,0 +1,58 @@
+TAP version 13
+# Subtest: ships a finished account shell with the source-corrected clock
+ok 1 - ships a finished account shell with the source-corrected clock
+  ---
+  duration_ms: 4.230986
+  type: 'test'
+  ...
+# Subtest: pins the visible derivation to the corrected 2026 integer-cent fixture
+ok 2 - pins the visible derivation to the corrected 2026 integer-cent fixture
+  ---
+  duration_ms: 13.030353
+  type: 'test'
+  ...
+# Subtest: starts with four scoped tools and progressively reveals five then six
+ok 3 - starts with four scoped tools and progressively reveals five then six
+  ---
+  duration_ms: 1.707891
+  type: 'test'
+  ...
+# Subtest: requires exact model then prepare and a human confirmation before simulated submit
+ok 4 - requires exact model then prepare and a human confirmation before simulated submit
+  ---
+  duration_ms: 0.440909
+  type: 'test'
+  ...
+# Subtest: deregisters submit during blackout and preserves the structured refusal
+ok 5 - deregisters submit during blackout and preserves the structured refusal
+  ---
+  duration_ms: 0.384736
+  type: 'test'
+  ...
+# Subtest: renders the six-tool cap, source provenance, and synthetic boundary in product copy
+ok 6 - renders the six-tool cap, source provenance, and synthetic boundary in product copy
+  ---
+  duration_ms: 1.524526
+  type: 'test'
+  ...
+# Subtest: keeps grants in memory and contains no backend or financial transport
+ok 7 - keeps grants in memory and contains no backend or financial transport
+  ---
+  duration_ms: 1.682603
+  type: 'test'
+  ...
+# Subtest: defines responsive financial-product styling rather than a debug console
+ok 8 - defines responsive financial-product styling rather than a debug console
+  ---
+  duration_ms: 0.751518
+  type: 'test'
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 8
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 74.252573

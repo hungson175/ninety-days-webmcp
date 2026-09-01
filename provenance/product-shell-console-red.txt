@@ -1,0 +1,9 @@
+127.0.0.1 - - [02/Sep/2026 02:45:17] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [02/Sep/2026 02:45:17] "GET /styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [02/Sep/2026 02:45:17] "GET /src/app.mjs HTTP/1.1" 200 -
+127.0.0.1 - - [02/Sep/2026 02:45:17] "GET /src/catalog.mjs HTTP/1.1" 200 -
+127.0.0.1 - - [02/Sep/2026 02:45:17] "GET /src/tax/amt_6251.mjs HTTP/1.1" 200 -
+127.0.0.1 - - [02/Sep/2026 02:45:17] "GET /src/webmcp_adapter.mjs HTTP/1.1" 200 -
+127.0.0.1 - - [02/Sep/2026 02:45:17] code 404, message File not found
+127.0.0.1 - - [02/Sep/2026 02:45:17] "GET /favicon.ico HTTP/1.1" 404 -
+{"console_errors": ["Failed to load resource: the server responded with a status of 404 (File not found)"], "mode": "desktop", "model_context_injected": false, "registry_counts": [4, 5, 6, 5], "submitted_simulation": true}

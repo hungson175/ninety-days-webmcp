@@ -1,0 +1,22 @@
+TAP version 13
+# Subtest: desktop package exposes one early origin meta and the complete fallback page
+ok 1 - desktop package exposes one early origin meta and the complete fallback page
+  ---
+  duration_ms: 2266.234896
+  type: 'test'
+  ...
+# Subtest: mobile package preserves the cold manual product path
+ok 2 - mobile package preserves the cold manual product path
+  ---
+  duration_ms: 1584.316116
+  type: 'test'
+  ...
+1..2
+# tests 2
+# suites 0
+# pass 2
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 3902.012628

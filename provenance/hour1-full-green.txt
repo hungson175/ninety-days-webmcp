@@ -1,0 +1,62 @@
+
+> test
+> node --test
+
+TAP version 13
+# Subtest: mints a closed runtime grant_id enum from the live grant set
+ok 1 - mints a closed runtime grant_id enum from the live grant set
+  ---
+  duration_ms: 1.889767
+  type: 'test'
+  ...
+# Subtest: catalog schemas reject a hallucinated grant id before execution
+ok 2 - catalog schemas reject a hallucinated grant id before execution
+  ---
+  duration_ms: 0.7416
+  type: 'test'
+  ...
+# Subtest: never exposes more than six tools and reveals guarded writes progressively
+ok 3 - never exposes more than six tools and reveals guarded writes progressively
+  ---
+  duration_ms: 0.667706
+  type: 'test'
+  ...
+# Subtest: blackout removes submit_exercise without weakening the execution guard
+ok 4 - blackout removes submit_exercise without weakening the execution guard
+  ---
+  duration_ms: 0.372188
+  type: 'test'
+  ...
+# Subtest: aborted calls do not mutate model or prepared state
+ok 5 - aborted calls do not mutate model or prepared state
+  ---
+  duration_ms: 0.634431
+  type: 'test'
+  ...
+# Subtest: re-registers the exact progressive catalog and aborts stale registrations
+ok 6 - re-registers the exact progressive catalog and aborts stale registrations
+  ---
+  duration_ms: 2.415772
+  type: 'test'
+  ...
+# Subtest: descriptors carry the runtime enum and execute through the session guard
+ok 7 - descriptors carry the runtime enum and execute through the session guard
+  ---
+  duration_ms: 0.368502
+  type: 'test'
+  ...
+# Subtest: fails closed and rolls back every registration when one registration fails
+ok 8 - fails closed and rolls back every registration when one registration fails
+  ---
+  duration_ms: 0.69483
+  type: 'test'
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 8
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 73.168914

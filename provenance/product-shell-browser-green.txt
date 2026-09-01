@@ -1,0 +1,22 @@
+TAP version 13
+# Subtest: desktop product flow is complete with AI off and guarded submit
+ok 1 - desktop product flow is complete with AI off and guarded submit
+  ---
+  duration_ms: 5689.508432
+  type: 'test'
+  ...
+# Subtest: mobile product has no horizontal overflow and keeps every core section readable
+ok 2 - mobile product has no horizontal overflow and keeps every core section readable
+  ---
+  duration_ms: 1660.928194
+  type: 'test'
+  ...
+1..2
+# tests 2
+# suites 0
+# pass 2
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 7403.248681

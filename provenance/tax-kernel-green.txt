@@ -1,0 +1,52 @@
+TAP version 13
+# Subtest: uses the 2026 exemption and 50 percent phaseout table
+ok 1 - uses the 2026 exemption and 50 percent phaseout table
+  ---
+  duration_ms: 1.495228
+  type: 'test'
+  ...
+# Subtest: applies 26 percent then 28 percent above the 2026 breakpoint
+ok 2 - applies 26 percent then 28 percent above the 2026 breakpoint
+  ---
+  duration_ms: 0.216404
+  type: 'test'
+  ...
+# Subtest: computes the line 2i adjustment proxy in integer cents
+ok 3 - computes the line 2i adjustment proxy in integer cents
+  ---
+  duration_ms: 0.140616
+  type: 'test'
+  ...
+# Subtest: matches the source-corrected full-exercise synthetic fixture
+ok 4 - matches the source-corrected full-exercise synthetic fixture
+  ---
+  duration_ms: 1.032187
+  type: 'test'
+  ...
+# Subtest: finds the exact last share count with zero modeled incremental proxy
+ok 5 - finds the exact last share count with zero modeled incremental proxy
+  ---
+  duration_ms: 0.62866
+  type: 'test'
+  ...
+# Subtest: refuses unsupported years and incomplete disposition facts
+ok 6 - refuses unsupported years and incomplete disposition facts
+  ---
+  duration_ms: 0.571641
+  type: 'test'
+  ...
+# Subtest: exports the exact synthetic and source boundary for the UI
+ok 7 - exports the exact synthetic and source boundary for the UI
+  ---
+  duration_ms: 0.285842
+  type: 'test'
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 7
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 60.665354

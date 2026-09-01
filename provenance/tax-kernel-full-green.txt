@@ -1,0 +1,104 @@
+
+> test
+> node --test
+
+TAP version 13
+# Subtest: uses the 2026 exemption and 50 percent phaseout table
+ok 1 - uses the 2026 exemption and 50 percent phaseout table
+  ---
+  duration_ms: 1.466663
+  type: 'test'
+  ...
+# Subtest: applies 26 percent then 28 percent above the 2026 breakpoint
+ok 2 - applies 26 percent then 28 percent above the 2026 breakpoint
+  ---
+  duration_ms: 0.206767
+  type: 'test'
+  ...
+# Subtest: computes the line 2i adjustment proxy in integer cents
+ok 3 - computes the line 2i adjustment proxy in integer cents
+  ---
+  duration_ms: 0.145982
+  type: 'test'
+  ...
+# Subtest: matches the source-corrected full-exercise synthetic fixture
+ok 4 - matches the source-corrected full-exercise synthetic fixture
+  ---
+  duration_ms: 0.699552
+  type: 'test'
+  ...
+# Subtest: finds the exact last share count with zero modeled incremental proxy
+ok 5 - finds the exact last share count with zero modeled incremental proxy
+  ---
+  duration_ms: 0.440271
+  type: 'test'
+  ...
+# Subtest: refuses unsupported years and incomplete disposition facts
+ok 6 - refuses unsupported years and incomplete disposition facts
+  ---
+  duration_ms: 0.429539
+  type: 'test'
+  ...
+# Subtest: exports the exact synthetic and source boundary for the UI
+ok 7 - exports the exact synthetic and source boundary for the UI
+  ---
+  duration_ms: 0.173198
+  type: 'test'
+  ...
+# Subtest: mints a closed runtime grant_id enum from the live grant set
+ok 8 - mints a closed runtime grant_id enum from the live grant set
+  ---
+  duration_ms: 1.497691
+  type: 'test'
+  ...
+# Subtest: catalog schemas reject a hallucinated grant id before execution
+ok 9 - catalog schemas reject a hallucinated grant id before execution
+  ---
+  duration_ms: 0.569585
+  type: 'test'
+  ...
+# Subtest: never exposes more than six tools and reveals guarded writes progressively
+ok 10 - never exposes more than six tools and reveals guarded writes progressively
+  ---
+  duration_ms: 0.460079
+  type: 'test'
+  ...
+# Subtest: blackout removes submit_exercise without weakening the execution guard
+ok 11 - blackout removes submit_exercise without weakening the execution guard
+  ---
+  duration_ms: 0.250129
+  type: 'test'
+  ...
+# Subtest: aborted calls do not mutate model or prepared state
+ok 12 - aborted calls do not mutate model or prepared state
+  ---
+  duration_ms: 0.440796
+  type: 'test'
+  ...
+# Subtest: re-registers the exact progressive catalog and aborts stale registrations
+ok 13 - re-registers the exact progressive catalog and aborts stale registrations
+  ---
+  duration_ms: 2.373589
+  type: 'test'
+  ...
+# Subtest: descriptors carry the runtime enum and execute through the session guard
+ok 14 - descriptors carry the runtime enum and execute through the session guard
+  ---
+  duration_ms: 0.386189
+  type: 'test'
+  ...
+# Subtest: fails closed and rolls back every registration when one registration fails
+ok 15 - fails closed and rolls back every registration when one registration fails
+  ---
+  duration_ms: 0.677305
+  type: 'test'
+  ...
+1..15
+# tests 15
+# suites 0
+# pass 15
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 68.465981

@@ -1,0 +1,40 @@
+TAP version 13
+# Subtest: mints a closed runtime grant_id enum from the live grant set
+ok 1 - mints a closed runtime grant_id enum from the live grant set
+  ---
+  duration_ms: 1.614209
+  type: 'test'
+  ...
+# Subtest: catalog schemas reject a hallucinated grant id before execution
+ok 2 - catalog schemas reject a hallucinated grant id before execution
+  ---
+  duration_ms: 0.625521
+  type: 'test'
+  ...
+# Subtest: never exposes more than six tools and reveals guarded writes progressively
+ok 3 - never exposes more than six tools and reveals guarded writes progressively
+  ---
+  duration_ms: 0.592792
+  type: 'test'
+  ...
+# Subtest: blackout removes submit_exercise without weakening the execution guard
+ok 4 - blackout removes submit_exercise without weakening the execution guard
+  ---
+  duration_ms: 0.276028
+  type: 'test'
+  ...
+# Subtest: aborted calls do not mutate model or prepared state
+ok 5 - aborted calls do not mutate model or prepared state
+  ---
+  duration_ms: 0.477425
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 64.328751

@@ -1,0 +1,40 @@
+TAP version 13
+# Subtest: uses the exact shared origin-trial token once before the app module
+ok 1 - uses the exact shared origin-trial token once before the app module
+  ---
+  duration_ms: 4.085954
+  type: 'test'
+  ...
+# Subtest: ships an MIT license with the public maintainer identity
+ok 2 - ships an MIT license with the public maintainer identity
+  ---
+  duration_ms: 1.022156
+  type: 'test'
+  ...
+# Subtest: README takes a cold reviewer from clone to tests and static serve
+ok 3 - README takes a cold reviewer from clone to tests and static serve
+  ---
+  duration_ms: 0.723527
+  type: 'test'
+  ...
+# Subtest: 404 fallback is byte-identical to the project-path-safe entry page
+ok 4 - 404 fallback is byte-identical to the project-path-safe entry page
+  ---
+  duration_ms: 2.077554
+  type: 'test'
+  ...
+# Subtest: uses a real static serve command without an uninstalled build stack
+ok 5 - uses a real static serve command without an uninstalled build stack
+  ---
+  duration_ms: 0.611922
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 59.68981
