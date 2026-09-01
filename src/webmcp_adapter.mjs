@@ -11,16 +11,31 @@ function getModelContext(documentRef) {
   }
 }
 
-function createDescriptor(session, declaration) {
+function sameNames(left, right) {
+  return left.length === right.length && left.every((name, index) => name === right[index]);
+}
+
+function createDescriptor({ documentRef, session, declaration, onToolExecuted }) {
   return Object.freeze({
     ...declaration,
     async execute(input = {}, { signal } = {}) {
-      return executeSessionTool(session, declaration.name, input, { signal });
+      const before = getSessionCatalog(session).map(({ name }) => name);
+      const result = await executeSessionTool(session, declaration.name, input, { signal });
+      const after = getSessionCatalog(session).map(({ name }) => name);
+      const runtime = sameNames(before, after)
+        ? null
+        : await syncSessionWebMCP({ documentRef, session, onToolExecuted });
+      await onToolExecuted?.({ name: declaration.name, input, result, runtime });
+      return result;
     },
   });
 }
 
-export async function syncSessionWebMCP({ documentRef = globalThis.document, session }) {
+export async function syncSessionWebMCP({
+  documentRef = globalThis.document,
+  session,
+  onToolExecuted = null,
+}) {
   const modelContext = getModelContext(documentRef);
   if (!modelContext) {
     activeController?.abort();
@@ -33,7 +48,7 @@ export async function syncSessionWebMCP({ documentRef = globalThis.document, ses
   const registered = [];
   try {
     for (const declaration of getSessionCatalog(session)) {
-      const descriptor = createDescriptor(session, declaration);
+      const descriptor = createDescriptor({ documentRef, session, declaration, onToolExecuted });
       await modelContext.registerTool(descriptor, { signal: controller.signal });
       registered.push(descriptor.name);
     }

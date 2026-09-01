@@ -64,7 +64,7 @@ function clone(value) {
   return JSON.parse(JSON.stringify(value));
 }
 
-export function createProductController({ documentRef = null } = {}) {
+export function createProductController({ documentRef = null, onStateChange = null } = {}) {
   const session = createEquitySession({
     grants: PRODUCT_FIXTURE.grants,
     taxProfile: PRODUCT_FIXTURE.taxProfile,
@@ -73,7 +73,15 @@ export function createProductController({ documentRef = null } = {}) {
   let runtime = { supported: false, registered: [] };
 
   async function syncRuntime() {
-    runtime = await syncSessionWebMCP({ documentRef, session });
+    runtime = await syncSessionWebMCP({
+      documentRef,
+      session,
+      onToolExecuted: async ({ result, runtime: nextRuntime }) => {
+        lastReceipt = clone(result);
+        if (nextRuntime) runtime = nextRuntime;
+        await onStateChange?.(snapshot());
+      },
+    });
     return runtime;
   }
 
@@ -130,7 +138,7 @@ function text(element, value) {
 }
 
 function initializeProduct(documentRef) {
-  const controller = createProductController({ documentRef });
+  const controller = createProductController({ documentRef, onStateChange: () => render() });
   const shareInput = documentRef.querySelector('[data-testid="share-input"]');
   const humanConfirm = documentRef.querySelector('[data-testid="human-confirm"]');
   const modelButton = documentRef.querySelector('[data-testid="model-action"]');

@@ -11,6 +11,21 @@ import {
 
 const root = new URL('../', import.meta.url);
 
+class FakeModelContext {
+  registrations = [];
+
+  async registerTool(descriptor, { signal } = {}) {
+    if (signal?.aborted) throw new DOMException('registration aborted', 'AbortError');
+    this.registrations.push({ descriptor, signal });
+  }
+
+  activeTools() {
+    return this.registrations
+      .filter(({ signal }) => !signal.aborted)
+      .map(({ descriptor }) => descriptor);
+  }
+}
+
 test('ships a finished account shell with the source-corrected clock', async () => {
   const html = await readFile(new URL('index.html', root), 'utf8');
   assert.match(html, /NINETY DAYS/);
@@ -51,6 +66,32 @@ test('starts with four scoped tools and progressively reveals five then six', as
   assert.equal(prepared.ok, true);
   assert.equal(controller.snapshot().toolNames.length, 6);
   assert.equal(controller.snapshot().toolNames.includes('submit_exercise'), true);
+});
+
+test('native registered calls re-sync the live catalog and product snapshot', async () => {
+  const modelContext = new FakeModelContext();
+  const snapshots = [];
+  const controller = createProductController({
+    documentRef: { modelContext },
+    onStateChange: (snapshot) => snapshots.push(snapshot),
+  });
+  await controller.syncRuntime();
+
+  assert.equal(modelContext.activeTools().length, 4);
+  const modelTool = modelContext.activeTools().find(({ name }) => name === 'model_exercise');
+  const modeled = await modelTool.execute({ grant_id: 'EMP-4471', shares: 4_263 });
+  assert.equal(modeled.ok, true);
+  assert.equal(modelContext.activeTools().length, 5);
+  assert.equal(controller.snapshot().toolNames.length, 5);
+  assert.equal(controller.snapshot().lastReceipt.status, 'modeled');
+
+  const prepareTool = modelContext.activeTools().find(({ name }) => name === 'prepare_exercise');
+  const prepared = await prepareTool.execute({ grant_id: 'EMP-4471', shares: 4_263 });
+  assert.equal(prepared.ok, true);
+  assert.equal(modelContext.activeTools().length, 6);
+  assert.equal(controller.snapshot().toolNames.includes('submit_exercise'), true);
+  assert.equal(controller.snapshot().lastReceipt.status, 'prepared');
+  assert.equal(snapshots.at(-1).toolNames.length, 6);
 });
 
 test('requires exact model then prepare and a human confirmation before simulated submit', async () => {

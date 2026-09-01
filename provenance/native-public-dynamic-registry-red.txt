@@ -1,0 +1,82 @@
+TAP version 13
+# Subtest: ships a finished account shell with the source-corrected clock
+ok 1 - ships a finished account shell with the source-corrected clock
+  ---
+  duration_ms: 4.463509
+  type: 'test'
+  ...
+# Subtest: pins the visible derivation to the corrected 2026 integer-cent fixture
+ok 2 - pins the visible derivation to the corrected 2026 integer-cent fixture
+  ---
+  duration_ms: 16.425199
+  type: 'test'
+  ...
+# Subtest: starts with four scoped tools and progressively reveals five then six
+ok 3 - starts with four scoped tools and progressively reveals five then six
+  ---
+  duration_ms: 1.785687
+  type: 'test'
+  ...
+# Subtest: native registered calls re-sync the live catalog and product snapshot
+not ok 4 - native registered calls re-sync the live catalog and product snapshot
+  ---
+  duration_ms: 1.035476
+  type: 'test'
+  location: '/home/hungson175/dev/earning-money/project/freelance-hunter/artifacts/ninety-days-webmcp/tests/product_shell.test.mjs:71:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    
+    4 !== 5
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 5
+  actual: 4
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///home/hungson175/dev/earning-money/project/freelance-hunter/artifacts/ninety-days-webmcp/tests/product_shell.test.mjs:84:10)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: requires exact model then prepare and a human confirmation before simulated submit
+ok 5 - requires exact model then prepare and a human confirmation before simulated submit
+  ---
+  duration_ms: 0.824435
+  type: 'test'
+  ...
+# Subtest: deregisters submit during blackout and preserves the structured refusal
+ok 6 - deregisters submit during blackout and preserves the structured refusal
+  ---
+  duration_ms: 0.643153
+  type: 'test'
+  ...
+# Subtest: renders the six-tool cap, source provenance, and synthetic boundary in product copy
+ok 7 - renders the six-tool cap, source provenance, and synthetic boundary in product copy
+  ---
+  duration_ms: 4.463756
+  type: 'test'
+  ...
+# Subtest: keeps grants in memory and contains no backend or financial transport
+ok 8 - keeps grants in memory and contains no backend or financial transport
+  ---
+  duration_ms: 1.570346
+  type: 'test'
+  ...
+# Subtest: defines responsive financial-product styling rather than a debug console
+ok 9 - defines responsive financial-product styling rather than a debug console
+  ---
+  duration_ms: 1.148145
+  type: 'test'
+  ...
+1..9
+# tests 9
+# suites 0
+# pass 8
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 84.984009
+
+RED_EXIT=1

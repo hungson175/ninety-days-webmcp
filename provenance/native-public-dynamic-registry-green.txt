@@ -1,0 +1,64 @@
+TAP version 13
+# Subtest: ships a finished account shell with the source-corrected clock
+ok 1 - ships a finished account shell with the source-corrected clock
+  ---
+  duration_ms: 4.343637
+  type: 'test'
+  ...
+# Subtest: pins the visible derivation to the corrected 2026 integer-cent fixture
+ok 2 - pins the visible derivation to the corrected 2026 integer-cent fixture
+  ---
+  duration_ms: 13.300372
+  type: 'test'
+  ...
+# Subtest: starts with four scoped tools and progressively reveals five then six
+ok 3 - starts with four scoped tools and progressively reveals five then six
+  ---
+  duration_ms: 1.750794
+  type: 'test'
+  ...
+# Subtest: native registered calls re-sync the live catalog and product snapshot
+ok 4 - native registered calls re-sync the live catalog and product snapshot
+  ---
+  duration_ms: 0.873076
+  type: 'test'
+  ...
+# Subtest: requires exact model then prepare and a human confirmation before simulated submit
+ok 5 - requires exact model then prepare and a human confirmation before simulated submit
+  ---
+  duration_ms: 0.499391
+  type: 'test'
+  ...
+# Subtest: deregisters submit during blackout and preserves the structured refusal
+ok 6 - deregisters submit during blackout and preserves the structured refusal
+  ---
+  duration_ms: 0.488625
+  type: 'test'
+  ...
+# Subtest: renders the six-tool cap, source provenance, and synthetic boundary in product copy
+ok 7 - renders the six-tool cap, source provenance, and synthetic boundary in product copy
+  ---
+  duration_ms: 2.651733
+  type: 'test'
+  ...
+# Subtest: keeps grants in memory and contains no backend or financial transport
+ok 8 - keeps grants in memory and contains no backend or financial transport
+  ---
+  duration_ms: 1.121057
+  type: 'test'
+  ...
+# Subtest: defines responsive financial-product styling rather than a debug console
+ok 9 - defines responsive financial-product styling rather than a debug console
+  ---
+  duration_ms: 0.845698
+  type: 'test'
+  ...
+1..9
+# tests 9
+# suites 0
+# pass 9
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 76.27767
